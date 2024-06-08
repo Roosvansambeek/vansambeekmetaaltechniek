@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  {% include 'bootstrap.html' %}
+  <title> Application Submitted </title>
+</head>
+<body>
+  {% include "navbar.html" %}
+
+  <div class="container">
+    <div
+    <h1 class="text-center mt-2 mb-4"
+      
+  
+    <p> Jouw (aan)vraag is verstuurd </p>
+  
+    <b> Naam </b>
+    <div class="mb-2">{{ aanvraag['full-name'] }}</div>
+  
+    <b> Email </b>
+    <div class="mb-2">{{ aanvraag['email'] }}</div>
+  
+    <b> Telefoonnummer </b>
+    <div class="mb-2">{{ aanvraag['telefoonnummer'] }}</div>
+  
+    <b> Vraag/offerte aanvraag </b>
+    <div class="mb-2">{{ aanvraag['vraag'] }}</div>
+
+  </div>  
+
+  {% include 'footer.html' %}
+  
+</body>
+</html>
