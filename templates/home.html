@@ -7,6 +7,8 @@
     <title> Van Sambeek metaal techniek</title>
     
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
       #banner {
         height: 620px;
@@ -37,87 +39,157 @@
 
       }
 
+      .footer{
+        background-color: #f8f9fa;
+        text-align: center;
+      }
+      
+      .container-introtekst {
+        color: black;
+        text-align: center;
+        padding:20px ;
+        margin: 40px
+        
+      }
+
+      .container-contact {
+        background-color: #020E5D;
+        text-align: left;
+        padding:40px ;
+        margin: 20px
+        
+      }
 
       
       p {
-        color: whitesmoke;
+        color: white;
         font-family: helvetica;
         font-style: italic;
         font-size: 20px
       }
 
+      p2 {
+        color: #020E5D;
+        font-family: helvetica;
+        font-style: italic;
+        font-size: 12px
+      }
+
+      p3 {
+        color: black;
+        font-family: helvetica;
+        font-style: normal;
+        font-size: 12px
+      }
+
+      p4 {
+        color: white;
+        font-family: helvetica;
+        font-style: bold;
+        font-size: 30px
+      }
+
+      p5 {
+        color: white;
+        font-family: helvetica;
+        font-style: bold;
+        font-size: 15px
+      }
+
+      p6 {
+        color: #020E5D
+        font-family: helvetica;
+        font-size: 14px
+      }
+      
       h2{
         color: #ecb653;
         font-family: helvetica;
         font-style: bold;
         font-size: 50px;
       }
+
+      h3{
+        color: #020E5D
+      }
       
     </style>
   </head>
   <body>
-    <div class="container">
-      <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#"></a>
-          <img src="https://9b031a47-c8aa-4d88-a132-5e79040f7ed0-00-2x1qdenu4s4uy.kirk.replit.dev/static/logo.png" alt="Bootstrap" width="90" height="72">
-
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Over Ons</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Werkzaamheden</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Contact</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-
-      
-      <div class="row">
-        
-           <img id="logo" src="https://9b031a47-c8aa-4d88-a132-5e79040f7ed0-00-2x1qdenu4s4uy.kirk.replit.dev/static/logo.png" height="140">
-          
-      </div>  
-    </div>
+     {% include 'navbar.html' %}
     
     
+    <!-- Container met afbeelding -->
     <div class="container-withimage" >
       <div class="row">
 
-         <div class="col-6" >
-           <br><br><br><br>
-           <h2>Van Sambeek Metaaltechniek</h2>
-            <p> "Vakmansch<en></en> in ijzer en metaalbewerking" </p>
+        <div class="col-6 d-flex justify-content-center align-items-center" style="height: 100vh;">
+           
+           <h2>VAN SAMBEEK METAALTECHNIEK <p> "Vakmanschap <en></en> in ijzer en metaalbewerking" </p>      </h2>
+            
         </div>
 
         
-          <div class="col-6">
-            <img id="logo-afb" src="https://9b031a47-c8aa-4d88-a132-5e79040f7ed0-00-2x1qdenu4s4uy.kirk.replit.dev/static/logo.png" height="140">
-             
-          </div>
+        <div class="col-6 d-flex justify-content-center align-items-center" style="height: 100vh;">
+          <a href=/overons>
+            <button type="button" class="btn btn-secondary" style="background-color: #020E5D; border-color: white; color: white; font-size: 20px; font-family: helvetica; padding: 14px 35px;">
+              Meer over ons?
+            </button>  
+          </a> 
+        </div>
       </div> 
     </div>
 
-    <div class="container">
+     <!-- Container met intro en afbeelding buizen -->
+
+    <div class="container-introtekst">
       <div class="row">
+        
 
-          <p> Hier komt tekst te staan </p>
+        <div class="col-6">
 
+          <img id="buizen" src="https://9b031a47-c8aa-4d88-a132-5e79040f7ed0-00-2x1qdenu4s4uy.kirk.replit.dev/static/buizen.JPG" height="500">
+
+        </div>
+
+        <div class="col-6" style="text-align: left">
+          <br>
+          <h3> Metaalbewerking </h3>
+          <br>
+          <p6> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p6>
+          <br><br>
+          <p6> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p6>
+
+          <br><br><br>
+          <a href=/werkzaamheden>
+            <button type="button" class="btn btn-secondary" style="background-color: #020E5D; border-color: white; color: white; font-size: 20px; font-family: helvetica; padding: 8px 20px;">
+              Onze Werkzaakzaamheden
+            </button>  
+          </a> 
+        </div>
       </div>  
     </div>
 
-      
+     <!-- Container met contact -->
+
+    <div class="container-contact">
+      <div class="row">
+        <div class="col-sm-7">
+          <p4> Zoekt u een specialist in
+           metaalbewerking? </p4>
+        </div>
+        <div class="col-sm-5">
+          
+          
+          <p5>  <i style="font-size:24px" class="fa">&#xf095;</i> &nbsp Bel +123456789 </p5>
+          <br>
+          <p5> <i style="font-size:24px" class="fa">&#xf0e0;</i> &nbsp Of vraag een offerte aan</p5>
+        </div>  
+
+      </div>
+    </div>
+
+        
+    {% include 'footer.html' %}
   </body>
 </html>
