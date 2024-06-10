@@ -1,4 +1,7 @@
 from flask import Flask, render_template, url_for, request, jsonify
+from email.message import EmailMessage
+import ssl
+import smtplib
 
 app = Flask(__name__)
 
@@ -27,9 +30,7 @@ def vraag_verstuurd():
     return render_template('aanvraag.html', aanvraag=data)
 
 
-from email.message import EmailMessage
-import ssl
-import smtplib
+
 
 def send_email(data):
   email_sender = "sambeekvanroos@gmail.com"
