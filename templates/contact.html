@@ -3,95 +3,102 @@
 <head>
   {% include 'bootstrap.html' %}
   <style>
-    .col-6 {
+    .col-12 {
       color: white;
     }
-    
-    .container-contact-image{
+
+    .container-contact-image {
       background-image: url('https://9b031a47-c8aa-4d88-a132-5e79040f7ed0-00-2x1qdenu4s4uy.kirk.replit.dev/static/bedrijfschaduw.png');
-      
       display: flex;
       justify-content: center;
       align-items: center;
-      width: 100%; 
+      width: 100%;
       height: 65vh;
-      margin: 0; 
+      margin: 0;
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
-      color: white
+      color: white;
     }
 
-    h2{
+    h2 {
       color: #FFF;
       font-family: helvetica;
-      font-style: bold;
+      font-weight: bold;
       font-size: 100px;
     }
 
-    .container{
+    .container {
       padding: 60px;
     }
 
+    @media (max-width: 767px) {
+      h2 {
+        font-size: 50px;
+      }
 
-    
+      iframe {
+        width: 100% !important;
+        height: auto !important;
+      }
+    }
   </style>
 </head>
 <body style="background-color: #050F4D;">
   {% include "navbar.html" %}
 
-
-  <div class="container-contact-image" >
+  <div class="container-contact-image">
     <div class="row">
-
-
-         <h2>CONTACT </h2>
-
+      <h2>CONTACT</h2>
     </div> 
   </div>
 
-
-  
   <div class='container mb-4 mt-4'>
     <div class='row'>
-      <div class="col-6">
-      
-        <h4> Contactgegevens </h4>
-        <p6> Adres: Berentsweg 7 a, 5451 GR Mill <br> Telefoonnummer:  06-53984572 <br>
-        </p6> <br>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1236.9798182440202!2d5.780102724261726!3d51.67888187689345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c71a901cd4b8f5%3A0x215a6fc99af5fd71!2sBerentsweg%207a%2C%205451%20GR%20Mill!5e0!3m2!1snl!2snl!4v1718011642783!5m2!1snl!2snl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> <br>
-      </div> 
-  
-      <div class="col-6">
+      <div class="col-12 col-md-6 mb-4">
+        <h4>Contactgegevens</h4>
+        <p>Adres: Berentsweg 7 a, 5451 GR Mill <br> Telefoonnummer: 06-53984572</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1236.9798182440202!2d5.780102724261726!3d51.67888187689345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c71a901cd4b8f5%3A0x215a6fc99af5fd71!2sBerentsweg%207a%2C%205451%20GR%20Mill!5e0!3m2!1snl!2snl!4v1718011642783!5m2!1snl!2snl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <div class="col-12 col-md-6">
         <form action="/contact/verstuurd" method="post">
           <div class='mb-2'>
-            <h4> Stel hier je vraag of offerteaanvraag: </h4>
-            <label> Naam </label> <br>
-            <input type="text" name="full-name"> <br>
+            <h4>Stel hier je vraag of offerteaanvraag:</h4>
+            <label>Naam</label>
+            <br>
+            <input type="text" name="full-name" class="form-control">
+            <br>
           </div>
-  
+
           <div class='mb-2'>
-            <label> Email </label> <br>
-            <input type="text" name="email"> <br>
+            <label>Email</label>
+            <br>
+            <input type="text" name="email" class="form-control">
+            <br>
           </div>
-  
+
           <div class='mb-2'>
-            <label> Telefoonnummer </label> <br>
-            <input type="text" name="telefoonnummer"> <br>
+            <label>Telefoonnummer</label>
+            <br>
+            <input type="text" name="telefoonnummer" class="form-control">
+            <br>
           </div>
-  
+
           <div class='mb-2'>
-            <label> Vraag/offerte aanvraag </label> <br>
-            <textarea name="vraag"></textarea> <br>
+            <label>Vraag/offerte aanvraag</label>
+            <br>
+            <textarea name="vraag" class="form-control"></textarea>
+            <br>
           </div>
           <br>
-  
+
           <input type="submit" class="btn btn-secondary" style="background-color: #020E5D; border-color: white; color: white; font-size: 20px; font-family: helvetica; padding: 10px 20px;">
         </form>
-      </div> 
+      </div>
     </div>
   </div>
 
-  {% include 'footer.html' %}
+  {% include 'footer_white.html' %}
 </body>
 </html>
